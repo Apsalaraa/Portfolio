@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Vrselja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="min-h-screen">
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-extrabold text-[--primary]">Ana Vrselja</h1>
+
+        <nav
+          id="navbar"
+          class="hidden md:flex space-x-6 text-gray-600 font-medium"
+        >
+          <a class="nav-link active" data-target="home">Home</a>
+          <a class="nav-link" data-target="about">About</a>
+          <a class="nav-link" data-target="projects">Projects</a>
+          <a class="nav-link" data-target="contact">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-md text-[--primary] hover:bg-gray-100 transition"
+          aria-label="Open menu"
+        >
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg border-t border-gray-100"
+      >
+        <nav class="flex flex-col space-y-2 p-4 text-gray-700 font-medium">
+          <a class="nav-link py-2" data-target="home">Home</a>
+          <a class="nav-link py-2" data-target="about">About</a>
+          <a class="nav-link py-2" data-target="projects">Projects</a>
+          <a class="nav-link py-2" data-target="contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <!-- Home Section -->
+      <section id="home" data-section="home" class="section-content active">
+        <div class="lg:flex items-center lg:space-x-12">
+          <div class="lg:w-3/5">
+            <h2
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[--primary] leading-tight mb-12"
+            >
+              Legal Insight. Modern
+              <span class="text-[--secondary]">Engineering.</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Results-driven professional merging legal insight with
+              <strong>Web Development & AI</strong> to build efficient systems.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                onclick="showSection('projects')"
+                class="bg-[--secondary] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition card cursor-pointer"
+                >View Projects</a
+              >
+              <a
+                onclick="showSection('contact')"
+                class="text-[--primary] border-2 border-[--primary] py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition card cursor-pointer"
+                >Get In Touch</a
+              >
+            </div>
+          </div>
+
+          <div class="lg:w-2/5 mt-10 lg:mt-0 flex justify-center">
+            <!-- Placeholder for professional photo -->
+            <div
+              class="w-64 h-64 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden card"
+            >
+              <i data-lucide="user" class="w-32 h-32 text-gray-500"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" data-section="about" class="section-content">
+        <h2
+          class="text-4xl font-bold text-[--primary] mb-8 border-b-4 border-[--secondary] inline-block pb-1"
+        >
+          About Me
+        </h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="md:col-span-2 space-y-6 text-lg text-gray-700">
+            <p>
+              I am experienced in handling <strong>complex projects</strong> and
+              <strong>fast-moving environments</strong>. I pay close attention
+              to details and think about how different parts of a system work
+              together.
+            </p>
+
+            <p>
+              I want to use my technical skills to make work more
+              <strong>efficient,</strong> creating tools and automations that
+              simplify content creation and improve legal and administrative
+              processes.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-[--primary] pt-4">
+              Technical & Legal Expertise
+            </h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i
+                    data-lucide="code"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  Web Development & UI/UX
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="brain"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  AI Integration
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="database"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  Unity, FCT, Bluebeam, OpenText CS
+                </li>
+              </ul>
+
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <i
+                    data-lucide="scale"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  Contract, Real Estate, Family Law
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="file-text"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  Research, Legal Drafting, Due Diligence
+                </li>
+                <li class="flex items-center">
+                  <i
+                    data-lucide="trending-up"
+                    class="w-5 h-5 mr-2 text-[--secondary]"
+                  ></i>
+                  Process Optimization, Problem-Solving
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education/Contact Sidebar -->
+          <div
+            class="md:col-span-1 space-y-8 p-6 bg-white rounded-xl card h-full"
+          >
+            <h3 class="text-xl font-bold text-[--primary] border-b pb-2">
+              Education
+            </h3>
+            <div class="space-y-4">
+              <p class="text-sm">
+                <span class="font-semibold block">Front-End Engineer</span>
+                <span class="text-gray-600 block">Codecademy</span>
+              </p>
+              <p class="text-sm">
+                <span class="font-semibold block"
+                  >Master & Bachelor of Laws (LLM/LLB)</span
+                >
+                <span class="text-gray-600 block"
+                  >J.J. Strossmayer University of Osijek, Croatia</span
+                >
+              </p>
+            </div>
+
+            <h3 class="text-xl font-bold text-[--primary] border-b pb-2 pt-4">
+              Contact
+            </h3>
+            <div class="space-y-3">
+              <p class="flex items-center text-sm text-gray-700">
+                <i
+                  data-lucide="mail"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
+                ></i>
+                vrseljaa@gmail.com
+              </p>
+              <p class="flex items-center text-sm text-gray-700">
+                <i
+                  data-lucide="phone"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
+                ></i>
+                (587) 839-8430 (Canada)
+              </p>
+              <p class="flex items-center text-sm text-gray-700">
+                <i
+                  data-lucide="map-pin"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
+                ></i>
+                Calgary, AB, Canada
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" data-section="projects" class="section-content">
+        <h2
+          class="text-4xl font-bold text-[--primary] mb-8 border-b-4 border-[--secondary] inline-block pb-1"
+        >
+          Projects
+        </h2>
+        <p class="text-xl text-gray-700 mb-10">
+          Showcasing the application of front-end and data science skills to
+          optimize document-heavy, complex legal and administrative processes.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden card hover:shadow-xl transition duration-300"
+          >
+            <div class="p-6">
+              <div class="text-[--secondary] mb-4">
+                <i data-lucide="file-check-2" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold text-[--primary] mb-2">
+                Real Estate Closing Automation (React)
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                A mock application utilizing React to generate and pre-populate
+                standardized legal documents (e.g., statements of adjustments,
+                transfer forms).
+              </p>
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full mr-2"
+                >React</span
+              >
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full"
+                >Legal Tech</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden card hover:shadow-xl transition duration-300"
+          >
+            <div class="p-6">
+              <div class="text-[--secondary] mb-4">
+                <i data-lucide="search-check" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold text-[--primary] mb-2">
+                Semantic Search for Content Server (AI/ML)
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Proof-of-concept demonstrating AI-powered semantic search over
+                large document datasets, improving retrieval accuracy.
+              </p>
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full mr-2"
+                >Machine Learning</span
+              >
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full"
+                >Python/JS API</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden card hover:shadow-xl transition duration-300"
+          >
+            <div class="p-6">
+              <div class="text-[--secondary] mb-4">
+                <i data-lucide="layout-grid" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-xl font-bold text-[--primary] mb-2">
+                Affordable Housing Program Dashboard
+              </h3>
+              <p class="text-gray-600 text-sm mb-4">
+                A responsive, user-friendly dashboard designed with Figma and
+                built with Tailwind CSS to visualize applicant demographics and
+                program metrics.
+              </p>
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full mr-2"
+                >Figma</span
+              >
+              <span
+                class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" data-section="contact" class="section-content">
+        <h2
+          class="text-4xl font-bold text-[--primary] mb-8 border-b-4 border-[--secondary] inline-block pb-1"
+        >
+          Get In Touch
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-xl card">
+            <h3 class="text-2xl font-semibold text-[--primary] mb-6">
+              Send a Message
+            </h3>
+            <form id="contact-form" class="space-y-4" novalidate>
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[--secondary] focus:border-[--secondary]"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[--secondary] focus:border-[--secondary]"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[--secondary] focus:border-[--secondary]"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[--primary] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition card"
+              >
+                Send Message
+              </button>
+            </form>
+
+            <div
+              id="form-message"
+              class="mt-4 hidden p-3 rounded-lg text-center font-medium"
+            ></div>
+          </div>
+
+          <!-- Contact Info & Social Links (Updated with Inline SVGs for reliability) -->
+          <div class="space-y-8 p-8 bg-gray-100 rounded-xl card h-full">
+            <h3 class="text-2xl font-semibold text-[--primary] mb-4">
+              Connect
+            </h3>
+            <p class="text-gray-700">
+              I am actively seeking opportunities that combine legal, process,
+              and technical challenges. Let's connect!
+            </p>
+
+            <div class="space-y-4">
+              <!-- Hyperlink Email: Wrap the icon and text in the <a> tag -->
+              <a
+                href="mailto:vrseljaa@gmail.com"
+                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+              >
+                <i class="fas fa-envelope w-6 h-6 mr-3 text-[--secondary]"></i>
+                vrseljaa@gmail.com
+              </a>
+              <!-- Hyperlink Phone: Use tel: protocol -->
+              <a
+                href="tel:+15878398430"
+                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+              >
+                <i class="fas fa-phone w-6 h-6 mr-3 text-[--secondary]"></i>
+                (587) 839-8430
+              </a>
+              <!-- Hyperlink Google Maps -->
+              <a
+                href="https://www.google.com/maps/place/Downtown+Calgary,+AB+T2P+2B3"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+              >
+                <i
+                  class="fas fa-map-marker-alt w-6 h-6 mr-3 text-[--secondary]"
+                ></i>
+                Calgary, AB T2P 2B3
+              </a>
+            </div>
+
+            <div class="flex space-x-6 pt-4">
+              <!-- LinkedIn (Inline SVG) -->
+              <a
+                href="#"
+                target="_blank"
+                aria-label="LinkedIn"
+                class="text-[--primary] hover:text-[--secondary] transition"
+              >
+                <svg
+                  class="w-8 h-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.529v-5.556c0-1.332-.47-2.147-1.488-2.147-1.217 0-1.936.874-1.936 2.147v5.556h-3.529s.047-9.522 0-10.422h3.529v1.493c.484-.71 1.341-1.722 3.197-1.722 2.339 0 4.103 1.54 4.103 4.845v5.806zm-17.5 0h-3.535V9.03h3.535v11.422zM2.872 5.377c-1.217 0-1.97-.815-1.97-1.802 0-.987.753-1.802 1.97-1.802s1.97.815 1.97 1.802c0 .987-.753 1.802-1.97 1.802zM22 22.049h-20V1.951h20v20.098z"
+                  />
+                </svg>
+              </a>
+              <!-- GitHub (Inline SVG) -->
+              <a
+                href="#"
+                target="_blank"
+                aria-label="GitHub"
+                class="text-[--primary] hover:text-[--secondary] transition"
+              >
+                <svg
+                  class="w-8 h-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.742.086-.727.086-.727 1.2 2.052 3.232 1.487 3.232 1.487 1.07 1.849 2.805 1.317 3.49.999.11-.775.418-1.317.762-1.625-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.191.694.808.576C20.56 21.793 24 17.292 24 12c0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <!-- X (Twitter) (Inline SVG) -->
+              <a
+                href="#"
+                target="_blank"
+                aria-label="X (Twitter)"
+                class="text-[--primary] hover:text-[--secondary] transition"
+              >
+                <svg
+                  class="w-8 h-8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.901 1.153h3.586l-9.112 10.459 10.155 11.388h-8.497l-6.307-7.251-8.528 7.251H.341l9.407-10.741L.349 1.153h8.847l5.655 6.471L18.901 1.153zm-2.196 17.151h2.433L6.326 4.793H3.64l13.065 13.511z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[--primary] text-white mt-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm"
+      >
+        &copy; <span id="year"></span> Ana Vrselja. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
