@@ -12,6 +12,14 @@ function showSection(sectionId) {
     .querySelectorAll(`[data-target="${sectionId}"]`)
     .forEach((link) => link.classList.add("active"));
 
+  // Handle logo active state (green when on Home)
+  const logo = document.getElementById("logo");
+  if (sectionId === "home") {
+    logo.classList.add("text-[--secondary]");
+  } else {
+    logo.classList.remove("text-[--secondary]");
+  }
+
   // Close mobile menu on click
   mobileMenu.classList.add("hidden");
 }
@@ -22,6 +30,12 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     const target = link.getAttribute("data-target");
     showSection(target);
   });
+});
+
+/* ========== LOGO CLICK HANDLER ========== */
+const logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  showSection("home");
 });
 
 /* ========== MOBILE MENU TOGGLE ========== */

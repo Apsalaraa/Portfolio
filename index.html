@@ -19,7 +19,14 @@
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
       >
-        <h1 class="text-2xl font-extrabold text-[--primary]">Ana Vrselja</h1>
+        <!-- <h1 class="text-2xl font-extrabold text-[--primary]">Ana Vrselja</h1> -->
+
+        <h1
+          id="logo"
+          class="text-2xl font-extrabold text-[--primary] cursor-pointer"
+        >
+          Ana Vrselja
+        </h1>
 
         <nav
           id="navbar"
@@ -96,6 +103,7 @@
               />
             </div>
           </div>
+        </div>
       </section>
 
       <!-- About Section -->
@@ -185,43 +193,72 @@
             <div class="space-y-4">
               <p class="text-sm">
                 <span class="font-semibold block">Front-End Engineer</span>
-                <span class="text-gray-600 block">Codecademy</span>
+                <a
+                  href="https://www.codecademy.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 block hover:text-[--secondary] transition"
+                >
+                  Codecademy
+                </a>
               </p>
               <p class="text-sm">
                 <span class="font-semibold block"
                   >Master & Bachelor of Laws (LLM/LLB)</span
                 >
-                <span class="text-gray-600 block"
-                  >J.J. Strossmayer University of Osijek, Croatia</span
+                <a
+                  href="https://www.pravos.unios.hr/about-the-faculty/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 block hover:text-[--secondary] transition"
                 >
+                  J.J. Strossmayer University of Osijek, Croatia
+                </a>
               </p>
             </div>
 
             <h3 class="text-xl font-bold text-[--primary] border-b pb-2 pt-4">
               Contact
             </h3>
+
             <div class="space-y-3">
-              <p class="flex items-center text-sm text-gray-700">
+              <!-- Email -->
+              <a
+                href="mailto:vrseljaa@gmail.com"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
+              >
                 <i
                   data-lucide="mail"
                   class="w-4 h-4 mr-2 text-[--secondary]"
                 ></i>
                 vrseljaa@gmail.com
-              </p>
-              <p class="flex items-center text-sm text-gray-700">
+              </a>
+
+              <!-- Phone -->
+              <a
+                href="tel:+15878398430"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
+              >
                 <i
                   data-lucide="phone"
                   class="w-4 h-4 mr-2 text-[--secondary]"
                 ></i>
-                (587) 839-8430 (Canada)
-              </p>
-              <p class="flex items-center text-sm text-gray-700">
+                (587) 839-8430
+              </a>
+
+              <!-- Google Maps Location -->
+              <a
+                href="https://www.google.com/maps/place/Downtown+Calgary,+AB+T2P+2B3"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
+              >
                 <i
                   data-lucide="map-pin"
                   class="w-4 h-4 mr-2 text-[--secondary]"
                 ></i>
-                Calgary, AB, Canada
-              </p>
+                Calgary, AB T2P 2B3
+              </a>
             </div>
           </div>
         </div>
@@ -405,32 +442,41 @@
               and technical challenges. Let's connect!
             </p>
 
-            <div class="space-y-4">
-              <!-- Hyperlink Email: Wrap the icon and text in the <a> tag -->
+            <div class="space-y-3">
+              <!-- Email -->
               <a
                 href="mailto:vrseljaa@gmail.com"
-                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
               >
-                <i class="fas fa-envelope w-6 h-6 mr-3 text-[--secondary]"></i>
+                <i
+                  data-lucide="mail"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
+                ></i>
                 vrseljaa@gmail.com
               </a>
-              <!-- Hyperlink Phone: Use tel: protocol -->
+
+              <!-- Phone -->
               <a
                 href="tel:+15878398430"
-                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
               >
-                <i class="fas fa-phone w-6 h-6 mr-3 text-[--secondary]"></i>
+                <i
+                  data-lucide="phone"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
+                ></i>
                 (587) 839-8430
               </a>
-              <!-- Hyperlink Google Maps -->
+
+              <!-- Google Maps Location -->
               <a
                 href="https://www.google.com/maps/place/Downtown+Calgary,+AB+T2P+2B3"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center text-lg text-gray-800 hover:text-[--secondary] transition duration-200"
+                class="flex items-center text-sm text-gray-700 hover:text-[--secondary] transition duration-200"
               >
                 <i
-                  class="fas fa-map-marker-alt w-6 h-6 mr-3 text-[--secondary]"
+                  data-lucide="map-pin"
+                  class="w-4 h-4 mr-2 text-[--secondary]"
                 ></i>
                 Calgary, AB T2P 2B3
               </a>
@@ -439,7 +485,7 @@
             <div class="flex space-x-6 pt-4">
               <!-- LinkedIn (Inline SVG) -->
               <a
-                href="#"
+                href="https://www.linkedin.com/in/ana-v-096578328/"
                 target="_blank"
                 aria-label="LinkedIn"
                 class="text-[--primary] hover:text-[--secondary] transition"
@@ -457,7 +503,7 @@
               </a>
               <!-- GitHub (Inline SVG) -->
               <a
-                href="#"
+                href="https://github.com/Apsalaraa?tab=repositories"
                 target="_blank"
                 aria-label="GitHub"
                 class="text-[--primary] hover:text-[--secondary] transition"
@@ -475,7 +521,7 @@
               </a>
               <!-- X (Twitter) (Inline SVG) -->
               <a
-                href="#"
+                href="https://x.com/"
                 target="_blank"
                 aria-label="X (Twitter)"
                 class="text-[--primary] hover:text-[--secondary] transition"
