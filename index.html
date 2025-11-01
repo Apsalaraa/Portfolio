@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ana Vrselja</title>
+
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%234eb59f%22>⚖️</text></svg>"
+      type="image/png"
+      sizes="32x32"
+      href="src/favicon/favicon-32x32.png"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/favicon/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="src/favicon/favicon.ico" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="src/favicon/apple-touch-icon.png"
+    />
+
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta name="theme-color" content="#ffffff" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css" />
@@ -21,12 +41,22 @@
       >
         <!-- <h1 class="text-2xl font-extrabold text-[--primary]">Ana Vrselja</h1> -->
 
-        <h1
-          id="logo"
-          class="text-2xl font-extrabold text-gray-800 cursor-pointer"
+        <a
+          href="#home"
+          class="cursor-pointer hover:text-[--primary] transition duration-200"
         >
-          Ana Vrselja
-        </h1>
+          <h1
+            id="logo"
+            class="text-2xl font-extrabold text-gray-800 flex items-center"
+          >
+            <img
+              src="src/favicon/android-chrome-192x192.png"
+              alt="AV Logo"
+              class="h-10 w-auto mr-3"
+            />
+            Ana Vrselja
+          </h1>
+        </a>
 
         <nav
           id="navbar"
