@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="min-h-screen">
+  <body class="min-h-screen flex flex-col">
     <!-- Header & Navigation -->
     <header class="bg-white sticky top-0 z-50 shadow-md">
       <div
@@ -23,7 +23,7 @@
 
         <h1
           id="logo"
-          class="text-2xl font-extrabold text-[--primary] cursor-pointer"
+          class="text-2xl font-extrabold text-gray-800 cursor-pointer"
         >
           Ana Vrselja
         </h1>
@@ -63,13 +63,13 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
       <!-- Home Section -->
       <section id="home" data-section="home" class="section-content active">
         <div class="lg:flex items-center lg:space-x-12">
           <div class="lg:w-3/5">
             <h2
-              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[--primary] leading-tight mb-12"
+              class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[--primary] leading-normal mb-12"
             >
               Legal Insight. Modern
               <span class="text-[--secondary]">Engineering.</span>
@@ -81,14 +81,24 @@
             <div class="flex space-x-4">
               <a
                 onclick="showSection('projects')"
-                class="bg-[--secondary] text-white py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition card cursor-pointer"
-                >View Projects</a
+                class="text-[--primary] border-2 border-[--secondary] bg-white py-3 px-6 rounded-lg font-semibold hover:bg-[--secondary] hover:text-white transition card cursor-pointer"
               >
+                Projects
+              </a>
+
               <a
                 onclick="showSection('contact')"
                 class="text-[--primary] border-2 border-[--primary] py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition card cursor-pointer"
-                >Get In Touch</a
+                >Contact</a
               >
+
+              <a
+                href="Ana-Vrselja-Resume.pdf"
+                download
+                class="text-[--primary] border-2 border-[--primary] bg-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition card cursor-pointer"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
 
@@ -551,7 +561,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[--primary] text-white mt-10">
+    <footer class="bg-[--primary] text-white">
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm"
       >
