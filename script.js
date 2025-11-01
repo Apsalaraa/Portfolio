@@ -50,7 +50,7 @@ mobileBtn.addEventListener("click", () => {
 const form = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   formMessage.classList.remove("hidden", "success", "error");
 
@@ -64,10 +64,32 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  formMessage.textContent =
-    "Message sent successfully! I will get back to you soon.";
-  formMessage.classList.add("success");
-  form.reset();
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      formMessage.textContent =
+        "Message sent successfully! I will get back to you soon.";
+      formMessage.classList.add("success");
+      form.reset();
+    } else {
+      const data = await response.json();
+      formMessage.textContent =
+        data?.errors?.[0]?.message || "Oops! Something went wrong.";
+      formMessage.classList.add("error");
+    }
+  } catch (error) {
+    formMessage.textContent = "Oops! Something went wrong.";
+    formMessage.classList.add("error");
+  }
 });
 
 /* ========== INITIALIZE ========== */
